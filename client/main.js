@@ -6,6 +6,14 @@ Template.messages.helpers({
     }
   },
 
+  me: function() {
+    var user = Meteor.users.findOne({_id: this.user});
+
+    if (user && Meteor.user() && user._id == Meteor.user()._id) {
+      return 'me';
+    }
+  },
+
   picture: function() {
     var user = Meteor.users.findOne({_id: this.user});
     if (user && user.emails) {

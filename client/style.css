@@ -1,0 +1,90 @@
+body {
+  background: lightblue;
+  font-size: 18px;
+}
+
+.message {
+  width: 50%;
+  clear: both;
+  float: right;
+  text-align: right;
+}
+
+.message .inner {
+  display: inline-block;
+}
+
+.message img {
+  border-radius: 50% 50%;
+  float: right;
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  margin-left: 12px;
+}
+
+.message.me img {
+  margin-left: 0;
+  margin-right: 12px;
+  float: left;
+}
+
+.message .box {
+  float: left;
+  padding: 3px 12px;
+  border-radius: 5px;
+  background: white;
+  position: relative;
+}
+
+.message .box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -8px;
+  width: 0;
+  height: 0;
+  top: 3px;
+  border-top: solid 8px transparent;
+  border-left: solid 16px white;
+  border-bottom: solid 8px transparent;
+}
+
+.message.me .box:before {
+  border-right: solid 16px white;
+  border-left: none;
+  right: inital;
+  left: -8px;
+}
+
+.message.me {
+  float: left;
+  text-align: left;
+}
+
+.message-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+}
+
+textarea {
+  width: 80%;
+  height: 50px;
+  float: left;
+  border: none;
+  font-size: 18px;
+}
+
+textarea + button {
+  width: 19%;
+  height: 56px;
+  line-height: 53px;
+  float: left;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 18px;
+}

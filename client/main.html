@@ -11,18 +11,21 @@
 
 <template name="messages">
   {{#each messages}}
-  <div class="message">
-    <img src="{{picture}}" />
-    <span class="from">{{username}}</span>
-    {{message}}
+  <div class="message {{me}}">
+    <div class="inner">
+      <img src="{{picture}}" />
+      <div class="box">
+        {{message}}
+      </div>
+    </div>
   </div>
   {{/each}}
   {{> form}}
 </template>
 
 <template name="form">
-  <form>
-    <textarea></textarea><br />
+  <form class="message-form">
+    <textarea></textarea>
     <button type="submit">Submit</button>
   </form>
 </template>
