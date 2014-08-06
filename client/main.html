@@ -6,5 +6,10 @@
 </body>
 
 <template name="messages">
-  
+  {{#each messages}}
+  <div class="message">
+    <span class="from">{{name}}</span>
+    {{message}}
+  </div>
+  {{/each}}
 </template>
