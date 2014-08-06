@@ -1,11 +1,13 @@
 <head>
 </head>
 
-<body>
-  {{> loginButtons}}
-  {{> messages}}
-  {{> form}}
-</body>
+<template name="chatrooms">
+  <ul>
+    {{#each rooms}}
+    <li><a href="/room/{{_id}}">{{_id}}</a></li>
+    {{/each}}
+  </ul>
+</template>
 
 <template name="messages">
   {{#each messages}}
@@ -15,6 +17,7 @@
     {{message}}
   </div>
   {{/each}}
+  {{> form}}
 </template>
 
 <template name="form">

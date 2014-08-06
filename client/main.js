@@ -1,8 +1,4 @@
 Template.messages.helpers({
-  messages: function() {
-    return Messages.find();
-  },
-
   username: function() {
     var user = Meteor.users.findOne({_id: this.user});
     if (user) {
@@ -24,7 +20,8 @@ Template.form.events({
     Messages.insert({
       user: Meteor.user()._id,
       message: message,
-      timestamp: (+new Date)
+      timestamp: (+new Date),
+      room: Router.current().params.chatroom
     });
   }
 })

@@ -1,3 +1,8 @@
 /gravatar
 /crypto-md5
 /crypto-base
+/iron-router
+/iron-layout
+/blaze-layout
+/iron-core
+/iron-dynamic-template
