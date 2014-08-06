@@ -17,3 +17,14 @@ Template.messages.helpers({
     }
   }
 });
+
+Template.form.events({
+  'submit form': function(event, template) {
+    var message = template.find('textarea').value;
+    Messages.insert({
+      user: Meteor.user()._id,
+      message: message,
+      timestamp: (+new Date)
+    });
+  }
+})

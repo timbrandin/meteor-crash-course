@@ -4,6 +4,7 @@
 <body>
   {{> loginButtons}}
   {{> messages}}
+  {{> form}}
 </body>
 
 <template name="messages">
@@ -14,4 +15,11 @@
     {{message}}
   </div>
   {{/each}}
+</template>
+
+<template name="form">
+  <form>
+    <textarea></textarea><br />
+    <button type="submit">Submit</button>
+  </form>
 </template>
