@@ -9,7 +9,8 @@
 <template name="messages">
   {{#each messages}}
   <div class="message">
-    <span class="from">{{name}}</span>
+    <img src="{{picture}}" />
+    <span class="from">{{username}}</span>
     {{message}}
   </div>
   {{/each}}
