@@ -24,6 +24,7 @@ Template.messages.helpers({
 
 Template.form.events({
   'submit form': function(event, template) {
+    event.preventDefault();
     var message = template.find('textarea').value;
     Messages.insert({
       user: Meteor.user()._id,

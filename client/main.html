@@ -2,6 +2,7 @@
 </head>
 
 <template name="chatrooms">
+  {{> loginButtons}}
   <ul>
     {{#each rooms}}
     <li><a href="/room/{{_id}}">{{_id}}</a></li>
